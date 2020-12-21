@@ -37,11 +37,11 @@
                         How the Internet Works / History</a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="page1.html">pg1</a>
-                        <a class="dropdown-item" href="page2.html">pg2</a>
-                        <a class="dropdown-item" href="page3.html">pg3</a>
-                        <a class="dropdown-item">page4</a>
-                        <a class="dropdown-item" href="page5.html">pg5</a>
+                        <a class="dropdown-item" href="page1.html">How it Started</a>
+                        <a class="dropdown-item" href="page2.html">The Dot Com Bubble</a>
+                        <a class="dropdown-item" href="page3.html">People and the Internet</a>
+                        <a class="dropdown-item">The Cloud</a>
+                        <a class="dropdown-item" href="page5.html">Kubernetes and Docker</a>
                     </div>
                 </li>
             </ul>
@@ -52,29 +52,85 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page"> How the Internet Works & History</li>
-            <li class="breadcrumb-item current" aria-current="page">PAGENAME
+            <li class="breadcrumb-item current" aria-current="page">The Cloud
     </nav>
     <div class="row">
         <div class="col-8">
-            <h1 style="color:white"> <b>Portfolio</b> </h1>
+            <h1 style="color:white"> <b>The Cloud</b> </h1>
             <p>
 
             <div class="p-3 mb-2 bg-light text-dark">
-                <h4>Title</h4>
-                text
+                <h4>What is virtualization?</h4>
+            <p>
+            <b>Virtualization</b> is a technology that allocates CPU, RAM, storage, and NIC’s (Network Interface Card’s) from the hardware
+            of a host to create multiple software virtual spaces. This allows for better usage of the host’s hardware, removes the amount of
+            hardware needed to perform a task, and facilitates the deployment of software.
+        </p>
+            <p>
+            <p>
+                After introducing either Type I, ‘Bare Metal’, or Type II, ‘Hosted OS’, HyperVisor into the host’s machine, virtualization is feasible.
+            In the case of Type I Hypervisor, it can be installed straight into the bare metal server, without anything else needed, and it can run VM’s
+            (Virtual Machines), which can be servers, applications, or any other file. Type II HyperVisors, on the other hand, are installed into the host’s OS,
+            and then used to create VM’s, with the same features as the ones run on Type I. </br>
+            So while Type I goes : Hardware > Virtualization </br>
+            Type II goes : Hardware > Host OS > Virtualization </br>
+        </p>
+            <p>
+                After HyperVisors are installed vSwitch’s, virtual switches, are then created along with virtual machines. In these virtual machines, vNics,
+                virtual NIC’s have to then be created, which are connected to the vSwitch, which is mapped, or connected, to the physical NIC’s of the network.
+            </p>
+            <p>
+                So virtualization roughly, at it’s simplest, works like this : </br>
+                Type I or II Hypervisor > vSwitch > VM’s (connected by) vNIC’s </br>
+            </p>
+
             </div>
             </p>
             <p>
             <div class=" p-3 mb-2 bg-secondary text-white">
-                <h4>title</h4>
-                text
+                <h4>What is containerization?</h4>
+        <p>
+        <b>Containerization</b>, on the other hand, is a form of virtualization that uses containers to isolate itself inside the host, where applications can run. For example
+        in Runtime Engines, like Docker, a file, like a ‘Docker File’ will be created, which then will create an image, and lastly an actual container will be created, which
+        holds everything needed to run the app. Some of the most famous container tech today includes Docker and Kubernetes.
+    </p>
+        <p>
+            So the process looks roughly like: </br>
+            Host OS > Runtime Engine > Containers </br>
+        </p>
             </div>
             </p>
             <p>
             <div class="p-3 mb-2 bg-light text-dark">
-                <h4>title</h4>
-                text
-            </div>
+                <h4>Comparison</h4>
+    <p>
+    In regard to isolation level, VM’s isolate machines, or apps. VM’s don't really interact with one another, and while in one VM, we can’t really tell what is going on
+    inside another. Containers are different, they isolate processes. Containers only see what is strictly necessary, and seemingly running on their own operating systems
+    complete with their own libraries code, and anything else needed to run the container.
+</p>
+    <p>
+        Furthermore, VM’s actually use more hardware resources than containers. Each VM needs its own guest OS system running in it, alongside its binary or libraries, and
+        the actual application. Containers only need its binary or libraries, and the application in it to run.
+    </p>
+    <p>
+        <b>Virtualization looks like: </b></br>
+        Hardware > Host OS > Hypervisor > VM’s (each containing : Guest OS > Libraries/Binary > Application)
+    </p>
+    <p>
+        <b>Containerization looks like:</b></br>
+            Hardware > Host OS > Runtime Engine > Containers (each containing : Libraries/Binary > Application) </br>
+    </p>
+    <p>
+        While virtualization deals with running multiple OS’s in a single device, containerization deals with the deployment applications in a virtual singular OS and device.
+        In addition to this, VM’s are better to implement when working on a long term project, as containers work better with shorter projects or assignments.
+    </p>
+    <p>
+        VM’s are easy to copy and move around, as they are not unlike any other file in a computer, multiple VM’s can be created in the hardware, within the capacity of it.
+        Similarly, containers are able to be replicated, created, moved and deployed as long as it is within the availability of the hardware’s resources. It should be noted
+        that it is usually feasible to create more containers in a hardware device than VM’s.
+    </p>
+    <p>
+</div>
             </p>
 
         </div>
@@ -84,11 +140,11 @@
                     How the Internet Works / History
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="page1.html"> pg1</a></li>
-                    <li class="list-group-item"><a href="page2.html"> pg2</a></li>
-                    <li class="list-group-item"><a href="page3.html"> pg3</a></li>
-                    <li class="list-group-item"><a>pg4</a></li>
-                    <li class="list-group-item"><a href="page5.html"> pg5</a></li>
+                    <li class="list-group-item"><a href="page1.html"> How it Started</a></li>
+                    <li class="list-group-item"><a href="page2.html"> The Dot Com Bubble</a></li>
+                    <li class="list-group-item"><a href="page3.html"> People and the Internet</a></li>
+                    <li class="list-group-item"><a>The Cloud</a></li>
+                    <li class="list-group-item"><a href="page5.html"> Kubernetes and Docker</a></li>
                 </ul>
             </div>
             <div class="card" style="width: 18rem;">
